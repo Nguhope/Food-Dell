@@ -1,0 +1,97 @@
+.footer {
+  color: #d9d9d9;
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0px 8vw;
+  padding-top: 80px;
+  margin-top: 100px;
+}
+
+.footer-content {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 80px;
+}
+
+.footer-content-left,
+.footer-content-right,
+.footer-content-center {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.footer-content-left li,
+.footer-content-right li,
+.footer-content-center li {
+  list-style: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.footer-content-right h2 , .footer-content-center h2 {
+    color: white;
+
+}
+.footer-social-icons img {
+    width: 40px;
+    margin-right: 15px;
+}
+.footer hr {
+    width: 100%;
+    height: 2px;
+    margin: 20px 0 ;
+    background-color: gray;
+    border: none;
+}
+
+@media(max-width:750px) {
+  .footer-content{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  .footer-copyright{
+    text-align: center;
+  }
+}
+.footer-content-left p span {
+  color: tomato;
+  cursor: pointer;
+}
+.footer-content-right li a, 
+.footer-content-center li a {
+  position: relative;
+  text-decoration: none; /* No underline by default */
+  color: inherit; /* Keep the original text color */
+}
+
+.footer-content-right li a::after, 
+.footer-content-center li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: tomato; /* Tomato color for the underline */
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+}
+
+.footer-content-right li a:hover::after,
+.footer-content-center li a:hover::after {
+  width: 100%; /* Extend the underline to the full width */
+  left: 0;
+  background: tomato; /* Tomato color for the underline */
+}
+
+
+
+
+
