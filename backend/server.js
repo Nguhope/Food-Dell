@@ -7,6 +7,9 @@ import userRouter from "./routes/userRoute.js";  // Correct import statement
 import "dotenv/config";
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 
 // App Configuration
