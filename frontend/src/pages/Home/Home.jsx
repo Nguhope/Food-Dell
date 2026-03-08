@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./home.css";
+import "./Home.css";
 import Header from "../../components/Header/Header";
 import ExploreMenu from "../../components/ExploreMenu/ExploreMenu"; // Corrected case
-import FoodDisplay from "../../components/FoodDisplay/FoodDisplay"; // Corrected case
+import FoodDisplay from "../../components/FoodDisplay/FoodDIsplay"; // Corrected case
 import AppDownLoad from "../../components/AppDownLoad/AppDownLoad";
 
 const Home = () => {

@@ -1,13 +1,22 @@
+# Dockerfile
 FROM node:20
 
 WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
+# Clean install dependencies
+RUN npm ci
 
+# Install nodemon globally
+RUN npm install -g nodemon
+
+# Copy all source files
 COPY . .
+
+# Rebuild native modules for Linux
+RUN npm rebuild bcrypt --build-from-source
 
 EXPOSE 4000
 
-CMD ["npm", "start"]
+CMD ["nodemon", "server.js"]
