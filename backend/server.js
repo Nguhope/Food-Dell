@@ -68,6 +68,13 @@ app.use((err, req, res, next) => {
   res.status(500).send("Something broke!");
 });
 
+const allowedOrigins = [
+  process.env.FRONTEND_URL || "http://localhost:3000",
+  process.env.ADMIN_URL || "http://localhost:5174"
+];
+
+app.use(cors({ origin: allowedOrigins, credentials: true }));
+
 // Start Server
 app.listen(port, () => {
   console.log(`Server Started on http://localhost:${port}`);

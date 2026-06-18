@@ -15,7 +15,7 @@ const StoreContextProvider = (props) => {
     }
   });
 
-  const url = "http://localhost:4000";
+  const url = import.meta.env.VITE_API_URL || "http://localhost:4000";
   const [token, setToken] = useState(() => localStorage.getItem("token") || "");
   const [food_list, setFoodList] = useState([]);
   const [loading, setLoading] = useState(true);

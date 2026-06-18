@@ -12,7 +12,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
-const url = "http://food-del-backend:4000";  return (
+const url = import.meta.env.VITE_API_URL;
+
+return (
     <div>
       <ToastContainer/>
       <Navbar/>
